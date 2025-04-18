@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import HeroButton from "./Hero-Button";
 import { Button } from "./button";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { Navbar } from "@/app/page";
 
 interface IWords {
     text: string;
@@ -13,7 +14,7 @@ interface IWords {
 
 export function HeroSection() {
     return (
-        <BackgroundBeamsWithCollision className="flex flex-col   justify-around mt-4 py-[8%] ">
+        <BackgroundBeamsWithCollision className="flex flex-col justify-around py-[8%] ">
             <div className="text-2xl relative  flex-col flex z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white  tracking-tight">
                 <motion.div
                     className="flex gap-1.5"
