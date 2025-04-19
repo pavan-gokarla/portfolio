@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import HeroButton from "./Hero-Button";
 import { Button } from "./button";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { Navbar } from "@/app/page";
+import { Navbar } from "@/app/Navbar";
 
 interface IWords {
     text: string;
