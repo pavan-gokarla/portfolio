@@ -58,7 +58,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     My
                     <div className=" flex justify-around items-baseline gap-1  ">
                         <span className="text-blue-500 dark:text-blue-500 ">
-                            Projects
+                            Journey
                         </span>
                     </div>
                 </motion.div>
