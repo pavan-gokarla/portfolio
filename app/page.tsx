@@ -4,7 +4,9 @@ import React from "react";
 import { HeroSection } from "@/components/ui/Hero-Section";
 import { Timeline } from "@/components/ui/timeline";
 import Card, { CardProps } from "@/components/ui/Card";
-import { Navbar } from "./Navbar";
+import { Navbar } from "../components/ui/Navbar";
+import { Projects } from "@/components/ui/Projects";
+import ContactMe from "@/components/ui/ContactMe";
 
 const Home = () => {
     const makeCard = (cardData: CardProps[]) => {
@@ -63,6 +65,12 @@ const Home = () => {
                 </div>
                 <div id="journey">
                     <Timeline data={data} />
+                </div>
+                <div id="projects" className=" w-full ">
+                    <Projects />
+                </div>
+                <div id="contact-me">
+                    <ContactMe />
                 </div>
             </main>
         </>

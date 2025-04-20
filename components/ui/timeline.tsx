@@ -4,6 +4,7 @@ import {
     useScroll,
     useTransform,
     motion,
+    useInView,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -31,19 +32,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+    const isInView = useInView(containerRef, { once: true, amount: 0.2 });
 
     return (
         <div
             className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
             ref={containerRef}
         >
-            <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-                <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-                    My{" "}
-                    <span className="text-blue-500 dark:text-blue-500 ">
-                        Journey
-                    </span>
-                </h2>
+            <div className="w-full flex justify-center  mx-auto py-20 px-4 md:px-8 lg:px-10">
+                <motion.div
+                    className="flex gap-1.5 text-2xl md:text-3xl lg:text-3xl "
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={
+                        isInView
+                            ? {
+                                  opacity: 1,
+                                  y: 0,
+                                  transition: {
+                                      duration: 0.5,
+                                  },
+                              }
+                            : {}
+                    }
+                >
+                    My
+                    <div className=" flex justify-around items-baseline gap-1  ">
+                        <span className="text-blue-500 dark:text-blue-500 ">
+                            Projects
+                        </span>
+                    </div>
+                </motion.div>
             </div>
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
