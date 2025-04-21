@@ -38,7 +38,7 @@ export function Navbar({ className }: { className?: string }) {
                     <MenuItem
                         setActive={setActive}
                         active={active}
-                        item="Contact Me"
+                        item="Contact-me"
                     ></MenuItem>
                 </div>
             </Menu>

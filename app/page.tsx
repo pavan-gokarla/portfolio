@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { HeroSection } from "@/components/ui/Hero-Section";
 import { Timeline } from "@/components/ui/timeline";
 import Card, { CardProps } from "@/components/ui/Card";
@@ -56,20 +56,23 @@ const Home = () => {
         },
     ];
     const data = makeCard(cardData);
+    useEffect(() => {
+        document.documentElement.style.scrollBehavior = "smooth";
+    }, []);
     return (
         <>
             <Navbar className="top-4" />
             <main>
-                <div id="hero">
+                <div id="Home">
                     <HeroSection />
                 </div>
-                <div id="journey">
+                <div id="Journey">
                     <Timeline data={data} />
                 </div>
-                <div id="projects" className=" w-full ">
+                <div id="Projects" className=" w-full ">
                     <Projects />
                 </div>
-                <div id="contact-me">
+                <div id="Contact-me">
                     <ContactMe />
                 </div>
             </main>
