@@ -6,6 +6,7 @@ import HeroButton from "./Hero-Button";
 import { Button } from "./button";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
+import Link from "next/link";
 
 interface IWords {
     text: string;
@@ -67,9 +68,11 @@ export function HeroSection() {
                     whileHover={{ scale: 1.1, transition: { delay: 0 } }}
                     whileTap={{ scale: 0.9, transition: { delay: 0 } }}
                 >
-                    <Button className="rounded-4xl hover:bg-blue-700  bg-blue-500 text-white  ">
-                        Get In Touch
-                    </Button>
+                    <Link href="#Contact-me">
+                        <Button className="rounded-4xl hover:bg-blue-700  bg-blue-500 text-white  ">
+                            Get In Touch
+                        </Button>
+                    </Link>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
@@ -85,9 +88,11 @@ export function HeroSection() {
                     whileHover={{ scale: 1.1, transition: { delay: 0 } }}
                     whileTap={{ scale: 0.9, transition: { delay: 0 } }}
                 >
-                    <Button variant="outline" className="rounded-4xl">
-                        View My Work
-                    </Button>
+                    <Link href={`#Projects`}>
+                        <Button variant="outline" className="rounded-4xl">
+                            View My Work
+                        </Button>
+                    </Link>
                 </motion.div>
             </div>
             <motion.div
