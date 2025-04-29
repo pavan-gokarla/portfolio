@@ -110,9 +110,15 @@ export function HeroSection() {
                     },
                 }}
             >
-                <Github className="cursor-pointer   md:size-10 lg:size-10  hover:stroke-blue-500 hover:size-12  duration-200 " />
-                <Linkedin className="cursor-pointer  md:size-10 lg:size-10  hover:stroke-blue-500 hover:size-12  duration-200 " />
-                <Twitter className="cursor-pointer  md:size-10 lg:size-10  hover:stroke-blue-500 hover:size-12  duration-200 " />
+                <Link href="https://github.com/pavan-gokarla">
+                    <Github className="cursor-pointer   md:size-10 lg:size-10  hover:stroke-blue-500 hover:size-12  duration-200 " />
+                </Link>
+                <Link href="https://www.linkedin.com/in/pavangokarla2003/">
+                    <Linkedin className="cursor-pointer  md:size-10 lg:size-10  hover:stroke-blue-500 hover:size-12  duration-200 " />
+                </Link>
+                <Link href="https://x.com/GokarlaPavan">
+                    <Twitter className="cursor-pointer  md:size-10 lg:size-10  hover:stroke-blue-500 hover:size-12  duration-200 " />
+                </Link>
             </motion.div>
         </BackgroundBeamsWithCollision>
     );
