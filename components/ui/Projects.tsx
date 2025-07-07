@@ -12,7 +12,7 @@ export function Projects() {
                 "A voice-based AI interview coach that simulates real interview scenarios based on role, level, and tech stack, and provides instant, personalized feedback.",
             img: "prepview.png",
             githubLink: "https://github.com/pavan-gokarla/prepview.git",
-            liveLink: "#",
+            liveLink: "https://prepview.justpavan.com/sign-in",
         },
         {
             title: "Capzion",
