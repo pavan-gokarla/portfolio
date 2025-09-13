@@ -1,14 +1,17 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { HeroSection } from "@/components/ui/Hero-Section";
 import { Timeline } from "@/components/ui/timeline";
 import Card, { CardProps } from "@/components/ui/Card";
 import { Navbar } from "../components/ui/Navbar";
 import { Projects } from "@/components/ui/Projects";
 import ContactMe from "@/components/ui/ContactMe";
+import Splash from "@/components/ui/Splash";
 
 const Home = () => {
+    const [showSplash, setShowSplash] = useState(true);
+
     const makeCard = (cardData: CardProps[]) => {
         return cardData.map((card, index) => {
             const { title, content, img, alt, badges, year } = card;
@@ -37,7 +40,7 @@ const Home = () => {
             badges: ["Frontend", "Backend"],
         },
         {
-            title: "GeeksForGeeks",
+            title: "GeeksForGeeks Head",
             content:
                 "Served as the Technical Representative for Raghu Engineering, acting as a liaison between students and faculty to coordinate and promote technical initiatives, events, and workshops.",
             img: "/gfg.png",
@@ -46,7 +49,7 @@ const Home = () => {
             badges: ["Workshops", "Education"],
         },
         {
-            title: "CodeChef",
+            title: "CodeChef Representative",
             content:
                 "Led the CodeChef campus chapter by organizing competitive programming events, coding contests, and workshops to promote problem-solving skills and student engagement in the programming community.",
             img: "/codechef.jpg",
@@ -59,6 +62,10 @@ const Home = () => {
     useEffect(() => {
         document.documentElement.style.scrollBehavior = "smooth";
     }, []);
+
+    if (showSplash) {
+        return <Splash onFinish={() => setShowSplash(false)} />;
+    }
     return (
         <>
             <Navbar className="top-4" />

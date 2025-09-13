@@ -1,11 +1,8 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { useTypewriter } from "react-simple-typewriter";
 import { motion } from "motion/react";
-import HeroButton from "./Hero-Button";
 import { Button } from "./button";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { Navbar } from "@/components/ui/Navbar";
 import Link from "next/link";
 
 interface IWords {
@@ -15,7 +12,7 @@ interface IWords {
 
 export function HeroSection() {
     return (
-        <BackgroundBeamsWithCollision className="flex flex-col justify-around py-[8%]  ">
+        <BackgroundBeamsWithCollision className="flex flex-col justify-around py-[8%]">
             <div className="text-2xl relative  flex-col flex z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white  tracking-tight">
                 <motion.div
                     className="flex gap-1.5"
@@ -46,8 +43,8 @@ export function HeroSection() {
                     }}
                     className="text-xs md:text-xl  text-[var(--noble--black--300)]   md:block lg:block  lg:text-2xl text-center"
                 >
-                    Full-stack wizard—frontends don’t scare me, backends don’t
-                    bite, and bugs... usually cry when they see me.
+                    Ability to bridge the gap between business needs and
+                    technical implementation by delivering impactful software.
                 </motion.div>
             </div>
             <div

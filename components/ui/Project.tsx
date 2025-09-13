@@ -22,7 +22,7 @@ export function Project(threeDCard: ThreeDCardProps) {
         <motion.div
             id="project-card"
             ref={ref}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={
                 isInView
                     ? {
@@ -52,7 +52,10 @@ export function Project(threeDCard: ThreeDCardProps) {
                     >
                         {description}
                     </CardItem>
-                    <CardItem translateZ="100" className="w-full mt-4">
+                    <CardItem
+                        translateZ="100"
+                        className="hidden lg:block w-full mt-4"
+                    >
                         <img
                             src={img}
                             height="1000"

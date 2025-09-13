@@ -16,13 +16,13 @@ export const Card = ({ title, content, badges, img, alt }: CardProps) => {
     return (
         <motion.div
             ref={ref}
-            className="card bg-base-100 w-96 shadow-sm p-5  "
-            initial={{ opacity: 0, x: 300 }}
+            className="card bg-base-100 w-full lg:w-96 shadow-sm p-5  "
+            initial={{ opacity: 0, x: 60 }}
             animate={
                 isInView
                     ? {
                           opacity: 1,
-                          x: 200,
+                          x: 0,
                           transition: {
                               ease: "easeIn",
                               type: "spring",
@@ -31,12 +31,12 @@ export const Card = ({ title, content, badges, img, alt }: CardProps) => {
                     : {}
             }
         >
-            <img src={img} alt={alt} />
+            <img className="hidden lg:block" src={img} alt={alt} />
 
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
-                <p>{content}</p>
-                <div className="card-actions justify-end">
+                <p className="hidden lg:block">{content}</p>
+                <div className="card-actions justify-end hidden lg:block">
                     {badges.map((badge, index) => {
                         return (
                             <Button
